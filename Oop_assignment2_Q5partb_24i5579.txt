@@ -1,0 +1,11 @@
+Array-Based Stack Analysis:
+ The array stack allows for O(1) push and pop in normal conditions since it uses direct indexing into the array. However, in the event of an array reaching capacity,
+ a push operation becomes O(n) because all the elements have to be copied into a new array of greater size. The major advantage is memory locality:since all the
+ elements are stored contiguously, the cache performance is very good; it makes most of the operations very fast.The main trade-off is potentially wasted memory
+ from pre-allocated but unused space, and the occasional performance hit during resizing.
+
+ Linked List-Based Stack Analysis:
+ Linked List Stack A linked list stack provides constant O(1) time for both push and pop operations because it involves nothing more than changes of pointer references;
+ no resizing is ever needed. Every action employs dynamic memory allocation/deallocation of nodes. Its major weakness is its poor cache performance: due to he fact that
+ nodes are scattered around, any access will probably lead to a cache miss. There is also higher memory overhead due to storage of data next pointers as well, while the 
+ overall memory usage is always exactly proportional to the number of elements.
